@@ -57,6 +57,7 @@ class DAOPTION(object):
     ## - DASimpleFoam:            Incompressible steady-state flow solver for Navier-Stokes equations
     ## - DASimpleTFoam:           Incompressible steady-state flow solver for Navier-Stokes equations with temperature
     ## - DAPisoFoam:              Incompressible transient flow solver for Navier-Stokes equations
+    ## - DAInterFoam:             Incompressible transient flow solver for Navier-Stokes equations with 2 isothermal immiscible fluids using a VOF 
     ## - DARhoSimpleFoam:         Compressible steady-state flow solver for Navier-Stokes equations (subsonic)
     ## - DARhoSimpleCFoam:        Compressible steady-state flow solver for Navier-Stokes equations (transonic)
     ## - DATurboFoam:             Compressible steady-state flow solver for Navier-Stokes equations (turbomachinery)
@@ -626,7 +627,7 @@ class PYDAFOAM(object):
         """
 
         self.solverRegistry = {
-            "Incompressible": ["DASimpleFoam", "DASimpleTFoam", "DAPisoFoam"],
+            "Incompressible": ["DASimpleFoam", "DASimpleTFoam", "DAPisoFoam", "DAInterFoam"],
             "Compressible": ["DARhoSimpleFoam", "DARhoSimpleCFoam", "DATurboFoam"],
             "Solid": ["DASolidDisplacementFoam"],
         }
